@@ -20,3 +20,4 @@ class Solution:
 
 solution = Solution()
 print(solution.twoSum([7,11,2,15], 9))
+
