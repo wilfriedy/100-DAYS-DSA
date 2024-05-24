@@ -51,6 +51,41 @@ class LinkedList:
             counter += 1
 
         return 'Out of range'
+    def insertValueInLinkedList(self,value, position):
+        if position <= 0:
+            return "Out of range"
+
+        currentNode = self.head
+        counter = 1
+        new_node = Node(value)
+
+        while currentNode is not None and counter < position-1:
+            currentNode = currentNode.next
+            counter += 1
+
+        if currentNode is None:
+            return 'Out of range'
+
+        currentNodeNext = currentNode.next
+        currentNode.next = new_node
+        new_node.next = currentNodeNext
+
+
+def reverseLinkedList(linkedListHead):
+    currentNode = linkedListHead
+    prev = None
+    while currentNode is not None:
+        nextValue = currentNode.next
+        currentNode.next = prev
+        prev = currentNode
+        currentNode = nextValue
+    return prev
+
+def printLL(head):
+    currentNode = head
+    while currentNode is not None:
+        print(currentNode.data, end="->")
+        currentNode = currentNode.next
 
 
 linkedListSolution = LinkedList()
@@ -58,7 +93,10 @@ linkedListSolution.addItem(2)
 linkedListSolution.addItem(3)
 linkedListSolution.addItem(5)
 linkedListSolution.prependNode(10)
+# print(linkedListSolution.insertValueInLinkedList(11,3))
 print(linkedListSolution.printLinkedList())
-print(linkedListSolution.getPositionByValue(20))
-print(linkedListSolution.getValueByPosition(5))
+reversed = reverseLinkedList(linkedListSolution.head)
+print(printLL(reversed))
+# print(linkedListSolution.getPositionByValue(20))
+# print(linkedListSolution.getValueByPosition(5))
 # print(linkedListSolution.head.data, end=f" -> next : {linkedListSolution.head.next.data}")
