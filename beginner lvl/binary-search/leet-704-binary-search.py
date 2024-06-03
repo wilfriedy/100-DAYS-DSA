@@ -18,6 +18,3 @@ class Solution:
         return -1
 
 nums = [2,4,6,8,10,15]
-
-# solution = binSearch(nums, 8)
-# print(solution)
