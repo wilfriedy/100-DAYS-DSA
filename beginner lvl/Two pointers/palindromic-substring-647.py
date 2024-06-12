@@ -12,7 +12,6 @@ class Solution:
 
         for i in range(len(s)):
             counter += checkPalindrome(i, i)
-
             if i < len(s) -1 and s[i] == s[i+1]:
                 counter += checkPalindrome(i, i+1)
         return counter
