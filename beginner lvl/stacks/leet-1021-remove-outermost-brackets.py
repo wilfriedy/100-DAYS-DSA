@@ -9,12 +9,9 @@ class Solution:
                     resultStack.append(char)
                 trackStack.append(char)
             else:
-                if char == ")":
-                    trackStack.pop()
-                    if trackStack:
-                        resultStack.append(char)
-            print(trackStack, "track")
-            print(resultStack, 'res')
+                trackStack.pop()
+                if trackStack:
+                    resultStack.append(char)
 
         return "".join(resultStack)
 
