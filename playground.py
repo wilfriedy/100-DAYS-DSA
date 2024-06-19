@@ -1,4 +1,3 @@
-nums = [3,0,1]
-n = len(nums)
-numRange = set(range(n+1))
-print(numRange)
+nums = []
+nums.extend([3]*2)
+print(nums)
