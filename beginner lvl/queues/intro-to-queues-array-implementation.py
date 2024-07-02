@@ -31,13 +31,18 @@ class Queue:
         else:
             print(self.queue[self.front])
 
+    def isEmpty(self):
+        return self.rear == self.front
+
 
 
 myQueue = Queue(6)
-nums = [1,2,3,4,5,6]
+nums = []
 for num in nums:
     myQueue.enqueue(num)
 
-myQueue.dequeue()
+# myQueue.dequeue()
 myQueue.displayQueue()
+print('\n')
+print(myQueue.isEmpty())
 
