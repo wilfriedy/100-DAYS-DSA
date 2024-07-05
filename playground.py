@@ -1,17 +1,4 @@
-from collections import deque
-from typing import List
-nums = [1,2,3,4,6]
+obj1 = {}
+obj2 = {}
 
-
-
-
-print(newList)
-
-
-
-
-# appendToTop(5)
-# print(nums)
-# myQueue = deque(nums)
-# myQueue.extendleft([3])
-# print(myQueue)
+print(obj1 == obj2)
