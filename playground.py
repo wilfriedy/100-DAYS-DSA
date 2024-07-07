@@ -1,2 +1,2 @@
-for key, val in enumerate([1,2,3,1]):
-    print(key)
+s = "AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
+print(s[22:22+10])
