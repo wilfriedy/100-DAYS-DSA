@@ -40,7 +40,8 @@ class BinaryTree :
 
 
 myTree = BinaryTree()
-values = [100,101,99,97,86,140,120,44]
+# values = [100,101,99,97,86,140,120,44]
+values = [10,2,11,23,4,5,15]
 for value in values:
     myTree.insertNode(value)
 
