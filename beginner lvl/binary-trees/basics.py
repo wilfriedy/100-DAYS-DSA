@@ -34,6 +34,7 @@ class BinaryTree :
 
     def preorder_traversal(self, node, result):
         if node:
+
             result.append(node.value)
             self.preorder_traversal(node.left, result)
             self.preorder_traversal(node.right, result)
