@@ -11,7 +11,7 @@ def selection_sort(nums: List[int]) -> List[int]:
             if nums[current_min] > nums[j]:
                 current_min = j
 
-            nums[i], nums[current_min] = nums[current_min], nums[i]
+        nums[i], nums[current_min] = nums[current_min], nums[i]
 
     return nums
 
