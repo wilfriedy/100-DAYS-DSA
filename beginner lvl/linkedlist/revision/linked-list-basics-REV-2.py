@@ -51,6 +51,18 @@ class LinkedList:
         print(slow.value)
         return slow
 
+    def reverseList(self):
+        current_node = self.head
+        prev = None
+
+        while current_node:
+            temp = current_node.next
+            current_node.next = prev
+            prev = current_node
+            current_node = temp
+
+        self.head = prev
+
 
 
 values = [1,2,3,4,5,6]
@@ -58,6 +70,11 @@ myList = LinkedList()
 for value in values:
     myList.insertNodes(value)
 
+myList.printNodes()
+myList.reverseList()
+print("reversed version of the list")
+myList.printNodes()
+
 # myList.printNodes()
 # myList.findMiddleNode()
-myList.middleOfList()
+# myList.middleOfList()
