@@ -1,11 +1,7 @@
-mat = [[1, 1, 0, 0, 0], [1, 1, 1, 1, 0], [1, 0, 0, 0, 0], [1, 1, 0, 0, 0],
-       [1, 1, 1, 1, 1]]
+values = [1, 2, 3, 4, 5, 6]
+print(len(values))
+for index, value in enumerate(values):
+    print(f'{value} is at index {index}')
+print(values[len(values)//2])
 
-k = 3
-total = [(sum(s), i) for i, s in enumerate(mat)]
 
-total.sort(key= lambda x : x[0])
-# for i in range(k):
-#     print(total[i][1])
-
-print([i[1] for i in total[:k]])
