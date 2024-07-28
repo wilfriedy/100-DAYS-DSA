@@ -1,7 +1,2 @@
-values = [1, 2, 3, 4, 5, 6]
-print(len(values))
-for index, value in enumerate(values):
-    print(f'{value} is at index {index}')
+values = [2, 4, 5, 6, 7, 8]
 print(values[len(values)//2])
-
-
