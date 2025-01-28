@@ -1,6 +1,14 @@
-nums = [1,2,3,4]
+from typing import List
 
-for i in range(1, len(nums)):
-    nums[i] += nums[i-1]
 
-print(nums)
+class Solution:
+    def moveZeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        numsOfZeros = 0
+        while 0 in nums:
+            nums.remove(0)
+            numsOfZeros +=1
+
+        nums.extend([0] * numsOfZeros)
